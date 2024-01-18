@@ -72,7 +72,8 @@ This document assumes you use macOS
 2. In the terminal, navigate to the directory in which you have cloned the project and run the following command to install the project dependencies:
 - npm install
 - npm install cypress --save-dev
-3. Cypress allows you to run scripts in two different modes: Interactive and Headless. 
+3. Cypress allows you to run scripts in two different modes: Interactive and Headless.
+  
 a) Interactive mode: 
 Once the runner is launched, you can select any test suite from to run
 cypress open --config-file 'cypress/e2e/SearchForm.cy.js'
