@@ -74,12 +74,10 @@ Installation
 - npm install cypress --save-dev
 3. Cypress allows you to run scripts in two different modes: Interactive and Headless. 
 a) Interactive mode: 
-# Once the runner is launched, you can select any test suite from to run
+Once the runner is launched, you can select any test suite from to run
 cypress open --config-file 'cypress/e2e/SearchForm.cy.js'
 
 b) Headless mode:
-# By default, in the headless mode, Cypress will run all tests suites (all .spec files)
+By default, in the headless mode, Cypress will run all tests suites (all .spec files)
 npm run cypress:open
 
-
-NOTE:This is a permanent solution. EXPORT saves variables while the terminal window exists.
