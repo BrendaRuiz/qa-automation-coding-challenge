@@ -60,14 +60,14 @@ The tooling used in this project are mainly:
 - Jest
 
 ## Local Project Setup
-Pre-requisites
+# Pre-requisites
 NodeJS
 
 One of the following versions of Node.js must be installed to run npm:
 18.0.0 or higher
-# This document assumes you use macOS
+This document assumes you use macOS
 
-Installation
+# Installation
 1. Clone this repository
 2. In the terminal, navigate to the directory in which you have cloned the project and run the following command to install the project dependencies:
 - npm install
