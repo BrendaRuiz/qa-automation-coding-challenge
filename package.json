@@ -1,30 +1,23 @@
 {
   "name": "qa-automation-coding-challenge",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "elliptic": "^6.5.4",
-    "immer": "^9.0.6",
-    "object-path": "^0.11.8",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "^4.0.3",
-    "serialize-javascript": "^5.0.1",
-    "ssri": "^8.0.1",
-    "y18n": "^5.0.8",
-    "yargs-parser": "^20.2.7"
-  },
+  "packageManager": "yarn@4.0.2",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "react-scripts --openssl-legacy-provider start",
+    "test": "start-server-and-test start http://localhost:3000 cypress:open",
+    "cypress:open": "cypress run --browser chrome --e2e",
+    "cypress:report": "cypress run --reporter mochawesome"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "devDependencies": {
+    "cypress": "^13.6.3",
+    "mochawesome": "^7.1.3",
+    "mochawesome-report-generator": "^6.2.0",
+    "cypress-mochawesome-reporter": "^3.8.0"
+  },
+  "dependencies": {
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "browserslist": {
     "production": [

@@ -1,0 +1,119 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-01-18T05:34:26.792Z",
+    "end": "2024-01-18T05:34:28.440Z",
+    "duration": 1648,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9bbecac1-24de-4392-bdc2-aaaa5e51b0d0",
+      "title": "",
+      "fullFile": "cypress/e2e/SearchForm.cy.js",
+      "file": "cypress/e2e/SearchForm.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1705fc54-bcaa-436d-bae7-2b7a07f8033e",
+          "title": "Get Github Repos",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify the user can interact with the Search Form",
+              "fullTitle": "Get Github Repos Verify the user can interact with the Search Form",
+              "timedOut": null,
+              "duration": 1134,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "search.userNameInput('Test').should('be.visible');\nsearch.clickSubmitBtn();\nsearch.foundReposMessage().should('include.text', 'Found ').and('be.visible');",
+              "err": {},
+              "uuid": "cdd4f570-b2b1-4c44-9491-e46c14ec9668",
+              "parentUUID": "1705fc54-bcaa-436d-bae7-2b7a07f8033e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify the repo information displays when making a search",
+              "fullTitle": "Get Github Repos Verify the repo information displays when making a search",
+              "timedOut": null,
+              "duration": 441,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "search.userNameInput('Test');\nsearch.clickSubmitBtn();\nsearch.verifyReposList();",
+              "err": {},
+              "uuid": "3ee62df7-3f73-46bf-894c-50efff39c7a5",
+              "parentUUID": "1705fc54-bcaa-436d-bae7-2b7a07f8033e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "cdd4f570-b2b1-4c44-9491-e46c14ec9668",
+            "3ee62df7-3f73-46bf-894c-50efff39c7a5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1575,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
