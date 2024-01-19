@@ -1,0 +1,43 @@
+name: Github repos app # name of the workflow
+
+on: push
+
+jobs:
+  Start-the-app:
+   runs-on: ubuntu-latest
+   steps:
+      # checkout the repository content to github runner
+      - name: Checkout
+        uses: actions/checkout@v2
+      # setup nodejs environment
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.1.5
+        with:
+          node-version: "18.16.1"
+
+      # cache the dependencies to speed up the build
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Deploy the app
+        run: npm run deploy
+  Cypress-run:
+    if: always()
+    needs: [Start-the-app]
+    runs-on: ubuntu-latest
+    steps:
+     # checkout the repository content to github runner
+        - name: Checkout
+          uses: actions/checkout@v2
+    # Cypress runs here
+        - name: Cypress E2E run
+          uses: cypress-io/github-action@v6
+          with:
+            browser: chrome
+
+  
+            

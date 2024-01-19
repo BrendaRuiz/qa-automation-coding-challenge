@@ -4,7 +4,7 @@ module.exports = defineConfig({
   reporter: 'mochawesome',
   e2e: {
     specPattern: 'cypress/e2e/*.cy.js',
-    baseUrl: "http://localhost:3000",
+    baseUrl: "https://brendaruiz.github.io/qa-automation-coding-challenge/",
 
     setupNodeEvents(on, config) {
       // implement node event listeners here
