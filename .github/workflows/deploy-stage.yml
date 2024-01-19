@@ -36,16 +36,20 @@ jobs:
       - name: Build
         run: npm install react-scripts@latest
       - name: App starting
-        run: npm run
+        run: npm run deploy
   Cypress-run:
-    if: always()
-    needs: [Start-the-app]
+    
     runs-on: ubuntu-latest
     steps:
      # checkout the repository content to github runner
         - name: Checkout
           uses: actions/checkout@v2
     # Cypress runs here
+        # installing yarn dependencies
+        - name: install yarn version
+          run: yarn set version 1.22.19
+        - name: yarn install
+          run: yarn install
         - name: Cypress E2E run
           uses: cypress-io/github-action@v6
           with:
