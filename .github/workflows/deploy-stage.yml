@@ -23,8 +23,20 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - name: Deploy the app
-        run: npm run deploy
+     # install dependencies
+      - name: Install dependencies
+        run: corepack enable 
+      # installing yarn dependencies
+      - name: install yarn version
+        run: yarn set version 1.22.19
+      - name: yarn install
+        run: yarn install
+
+      # build the react app
+      - name: Build
+        run: npm install react-scripts@latest
+      - name: App starting
+        run: npm run
   Cypress-run:
     if: always()
     needs: [Start-the-app]
