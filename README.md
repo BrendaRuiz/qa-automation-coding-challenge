@@ -48,37 +48,3 @@ Help Adam gain confidence in further development by automatically testing the mo
 
 ## Good luck and happy coding! :)
 
-## Get Github Repos App - Test Automation Framework
-## About
-This repository also contains the Test Automation Framework for the Get Github Repos app. It includes tests to validate features from the following applications:
-* Front-End (FE)
-
-The tooling used in this project are mainly:
-
-- Cypress
-- Mocha
-- Jest
-
-## Local Project Setup
-# Pre-requisites
-NodeJS
-
-One of the following versions of Node.js must be installed to run npm:
-18.0.0 or higher
-This document assumes you use macOS
-
-# Installation
-1. Clone this repository
-2. In the terminal, navigate to the directory in which you have cloned the project and run the following command to install the project dependencies:
-- npm install
-- npm install cypress --save-dev
-3. Cypress allows you to run scripts in two different modes: Interactive and Headless.
-  
-a) Interactive mode: 
-Once the runner is launched, you can select any test suite from to run
-cypress open --config-file 'cypress/e2e/SearchForm.cy.js'
-
-b) Headless mode:
-By default, in the headless mode, Cypress will run all tests suites (all .spec files)
-npm run cypress:open
-

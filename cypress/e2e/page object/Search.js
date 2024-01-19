@@ -8,11 +8,12 @@ export default class SearchPage{
         this.repoContainer   = '.repo-list-container>ul>li.repo-row',
         this.repoDescription = 'li>p.repo-description'
         this.messageArea     = 'p.repo-amount'
+        this.messageSuccess  = 'p.message-success'
     }
 
     /* Functions */
     userNameInput(text) {
-        return cy.get(this.inputName).first().type(text)
+        return cy.get(this.inputName).first()
     }
 
     clickSubmitBtn() {
@@ -30,6 +31,9 @@ export default class SearchPage{
         cy.get(this.repoDescription)
         .should('not.be.empty').as('description')
       })
+    }
+    getMessageSuccess(){
+        return cy.get(this.messageSuccess)
     }
 
 }

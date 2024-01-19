@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 2,
-    "passes": 2,
+    "passes": 1,
     "pending": 0,
-    "failures": 0,
-    "start": "2024-01-18T05:34:26.792Z",
-    "end": "2024-01-18T05:34:28.440Z",
-    "duration": 1648,
+    "failures": 1,
+    "start": "2024-01-19T21:10:35.840Z",
+    "end": "2024-01-19T21:10:38.317Z",
+    "duration": 2477,
     "testsRegistered": 2,
-    "passPercent": 100,
+    "passPercent": 50,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "9bbecac1-24de-4392-bdc2-aaaa5e51b0d0",
+      "uuid": "ade74e2a-95e4-4207-81e2-62e8e3429b1d",
       "title": "",
       "fullFile": "cypress/e2e/SearchForm.cy.js",
       "file": "cypress/e2e/SearchForm.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "1705fc54-bcaa-436d-bae7-2b7a07f8033e",
+          "uuid": "90dc7ed5-f056-463d-bbaf-12a29e0aa79c",
           "title": "Get Github Repos",
           "fullFile": "",
           "file": "",
@@ -38,17 +38,21 @@
               "title": "Verify the user can interact with the Search Form",
               "fullTitle": "Get Github Repos Verify the user can interact with the Search Form",
               "timedOut": null,
-              "duration": 1134,
-              "state": "passed",
-              "speed": "fast",
-              "pass": true,
-              "fail": false,
+              "duration": 1173,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
               "context": null,
-              "code": "search.userNameInput('Test').should('be.visible');\nsearch.clickSubmitBtn();\nsearch.foundReposMessage().should('include.text', 'Found ').and('be.visible');",
-              "err": {},
-              "uuid": "cdd4f570-b2b1-4c44-9491-e46c14ec9668",
-              "parentUUID": "1705fc54-bcaa-436d-bae7-2b7a07f8033e",
+              "code": "search.userNameInput((void 0).repos.repo_user).should('be.visible');\nsearch.clickSubmitBtn();\nsearch.foundReposMessage().should('include.text', 'Found ').and('be.visible');",
+              "err": {
+                "message": "TypeError: Cannot read properties of undefined (reading 'repos')",
+                "estack": "TypeError: Cannot read properties of undefined (reading 'repos')\n    at Context.eval (webpack://qa-automation-coding-challenge/./cypress/e2e/SearchForm.cy.js:19:32)",
+                "diff": null
+              },
+              "uuid": "0816b05e-b172-4a20-a700-a5b805f724b2",
+              "parentUUID": "90dc7ed5-f056-463d-bbaf-12a29e0aa79c",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +60,7 @@
               "title": "Verify the repo information displays when making a search",
               "fullTitle": "Get Github Repos Verify the repo information displays when making a search",
               "timedOut": null,
-              "duration": 441,
+              "duration": 1204,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,21 +69,22 @@
               "context": null,
               "code": "search.userNameInput('Test');\nsearch.clickSubmitBtn();\nsearch.verifyReposList();",
               "err": {},
-              "uuid": "3ee62df7-3f73-46bf-894c-50efff39c7a5",
-              "parentUUID": "1705fc54-bcaa-436d-bae7-2b7a07f8033e",
+              "uuid": "07d9df84-48bd-42b9-a0b4-f3269db4d8da",
+              "parentUUID": "90dc7ed5-f056-463d-bbaf-12a29e0aa79c",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "cdd4f570-b2b1-4c44-9491-e46c14ec9668",
-            "3ee62df7-3f73-46bf-894c-50efff39c7a5"
+            "07d9df84-48bd-42b9-a0b4-f3269db4d8da"
           ],
-          "failures": [],
+          "failures": [
+            "0816b05e-b172-4a20-a700-a5b805f724b2"
+          ],
           "pending": [],
           "skipped": [],
-          "duration": 1575,
+          "duration": 2377,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
