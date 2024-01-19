@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/qa-automation-coding-challenge/static/css/main.8c1b6a29.css",
-    "main.js": "/qa-automation-coding-challenge/static/js/main.0af375a9.js",
+    "main.js": "/qa-automation-coding-challenge/static/js/main.dac52307.js",
     "index.html": "/qa-automation-coding-challenge/index.html",
     "main.8c1b6a29.css.map": "/qa-automation-coding-challenge/static/css/main.8c1b6a29.css.map",
-    "main.0af375a9.js.map": "/qa-automation-coding-challenge/static/js/main.0af375a9.js.map"
+    "main.dac52307.js.map": "/qa-automation-coding-challenge/static/js/main.dac52307.js.map"
   },
   "entrypoints": [
     "static/css/main.8c1b6a29.css",
-    "static/js/main.0af375a9.js"
+    "static/js/main.dac52307.js"
   ]
 }
