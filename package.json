@@ -1,10 +1,10 @@
 {
   "name": "qa-automation-coding-challenge",
-  "homepage":"https://BrendaRuiz.github.io/qa-automation-coding-challenge",
+  "homepage": "https://BrendaRuiz.github.io/qa-automation-coding-challenge",
   "packageManager": "yarn@4.0.2",
   "scripts": {
     "predeploy": "npm run build", 
-    "deploy": "gh-pages -b master -d build", 
+    "deploy": "gh-pages -b master -d build",
     "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
